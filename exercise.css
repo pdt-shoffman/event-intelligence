@@ -1,3 +1,19 @@
+p {
+	font-family: Arial, Helvetica, sans-serif;	
+
+}
+
+h1 {
+	color: #005a24;
+	font-family: Arial, Helvetica, sans-serif;	
+
+}
+
+a {
+	color: #00607f;
+}
+
+
 .exercise {
   width: 70%;
   max-width: 800px;
@@ -34,25 +50,18 @@
   	width: 180px;
 }
 
+.gifs {
+	width: 100%;
+	display: block;
+ 	margin-left: auto;
+  	margin-right: auto;}
+
+
+
 #dismiss {
 	float: right;
 	font-family: Arial, Helvetica, sans-serif;	
 
-}
-
-p {
-	font-family: Arial, Helvetica, sans-serif;	
-
-}
-
-h1 {
-	color: #005a24;
-	font-family: Arial, Helvetica, sans-serif;	
-
-}
-
-a {
-	color: #00607f;
 }
 
 #alert {
@@ -61,5 +70,14 @@ a {
 	margin: 15px 0px;
 	border-radius: 5px;
 
+}
+
+
+#tip {
+	background-color: #94b2a5;
+	padding: 10px 15px;
+	margin: 15px 0px;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;	
 
 }

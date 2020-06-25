@@ -7,8 +7,9 @@ var iag_training_inc_ct = 0;
 $('#start').on('click', function() {
 
     document.getElementById("instructions").innerHTML = "<h1>Create a Service</h1>\
-    	<p>In this exercise, we'll use <a href='https://support.pagerduty.com/docs/rulesets'>rulesets</a> to route incoming events. Before we create the rules, we need a service to route events to! Start by creating a service following the steps below: </p>\
-    	<p><img src='gifs/create-service.gif'></p>\
+    	<p>In this exercise, we'll use rulesets to route incoming events. Before we create the rules, we need a service to route events to! Start by creating a service following the steps below: </p>\
+    	<div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/services-and-integrations'>Services and Integrations</a> in the Knowledge Base!</div>\
+        <p><img class='gifs' src='gifs/create-service.gif'></p>\
         <p>1. Within your subdomain navigate to <em>Configuration</em> -&gt; <em>Services</em>.</p>\
 		<p>2. Click the <strong>New Service</strong> button.</p>\
 		<p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
@@ -25,7 +26,8 @@ $('#instructions').on('click', "#step2", function() {
 
     document.getElementById("instructions").innerHTML = "<h1>Create a Ruleset</h1>\
     	<p>Next create a new ruleset</p>\
-        <p><img src='gifs/create-ruleset.gif'></p>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
     	<p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
 		<p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
 		<p>3. Enter a&nbsp;<em>Title</em> for the ruleset.</p>\
@@ -84,7 +86,8 @@ $('#instructions').on('click', "#step5", function() {
 	if (no_gouping_inc_ct == 9) {
 		document.getElementById("instructions").innerHTML = "<h1>Enable Intelligent Alert Grouping</h1>\
     	<p>Good job - you've got your rules configured. With no grouping enabled on the service we can see what the responder experience is like without Event Intelligence. Next let's turn on Intelligent Alert Grouping on the service and see how the grouping alogorithm behaves without any training. </p>\
-        <p><img src='gifs/enable-iag.gif'></p>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping'>Intelligent Alert Grouping</a> in the Knowledge Base!</div>\
+        <p><img class='gifs' src='gifs/enable-iag.gif'></p>\
         <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Services</em>.</p>\
 		<p>2. Search for your service or find it in the list and click on the service name to view the service's profile.</p>\
 		<p>3. Click on the&nbsp;<strong>Response</strong> tab.</p>\
@@ -133,7 +136,7 @@ $('#instructions').on('click', "#step7", function() {
 
 	if (iag_no_training_inc_ct == 4) {
 		document.getElementById("instructions").innerHTML = "<h1>Train the Alert Grouping Algorithm</h1>\
-		<p><img src='gifs/merge-inc.gif'></p>\
+		<p><img class='gifs' src='gifs/merge-inc.gif'></p>\
         <p>1. Navigate to the <em>Incidents</em> list.</p>\
         <p>2. Select the checkboxes next to the exercise's 4 triggered incidents (or click the checkbox at the top of the incident table to select all).</p>\
         <p>3. Click the <b>Merge Incidents</b> button.</p>\
@@ -161,9 +164,9 @@ $('#instructions').on('click', "#step7", function() {
 $('#instructions').on('click', "#step8", function() {
 
 	document.getElementById("instructions").innerHTML = "<h1>IAG Behavior With Training</h1>\
-    	<p>Click the button to trigger an alert storm.</p>\
-    	<button class='trigger-buttons' id='trigger' type='submit'>Trigger Events</button>\
-    	<p>Routing key:"+routing_key+"</p>\
+        <p>Click the button to trigger an alert storm. Events will be sent to the routing key you pasted in earlier ("+routing_key+").</p>\
+        <button class='trigger-buttons' id='trigger' type='submit'>Trigger Events</button>\
+        <p>Wait for x seconds then check your service. How many incidents were triggered? Input the count below:</p>\
     	<input type='text' id='iag-training-inc-ct' placeholder='Incidents' required autofocus></p>\
     	<div id='alert' style='display: none;'></div>\
         <button class='nav-buttons' id='step9' type='submit'>Continue</button>"
