@@ -738,7 +738,7 @@ $('#instructions').on('click', "#validate-it-train", function() {
         msg.style.display="block";
 
         document.getElementById("correct").innerHTML = "<div id='dismiss'>x</div><p>Nice!</p>\
-        <p></p>"
+        <p>Merging the <em>API: Request Response Rate is High</em> and <em>web-app01-db01 running low on disk space</em> incidents on the first service created a correlation between those alerts, which the algorithm learned from. Related Incidents now suggests the <em>web-app02-db02 running low on disk space</em> incident on the second service as potentially related to the <em>API: Request Response Time is High</em> as a result. </p>"
         
         $('#nav-bar').html("<button class='nav-buttons back' id='step12' type='submit'>< Go Back</button>\
                 <button class='nav-buttons forward' id='step14' type='submit'>Continue ></button>");
