@@ -29,9 +29,12 @@ $('#instructions').on('click', "#home", function() {
 
 <!-- Part 1: Rulesets -->
 $('#rulesets').on('click', function() {
-         document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
-        <p>Rulesets in a nutshell - what to know:</p>\
+        document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
+        <p>PagerDuty's Event Intelligence increases employee productivity by cutting through the noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
+        <p>Noise reduction and rich context is achieved via multiple steps, which begin with Ruleset functionality.</p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <p><img class='gifs' src='gifs/global-rulesets.gif'></p>\
+        <p>Rulesets in a nutshell - what to know:</p>\
         <div class='lesson'>\
         <p>&bull; There are two types of rulesets within PagerDuty: <strong>Global Rulesets</strong> and <strong>Service Event Rules</strong>. Both support similar functionality: with each rule, customers specify a set of actions that should be performed on events that match the defined conditions. These actions may include suppressing non-actionable signals, transforming the alert description to be more user-friendly, or decorating the alert with additional context to the alert for responders by adding a note linking to a runbook, for example. While functionality is similar across the ruleset types, there are three key differences:</p> \
         <div class='lesson'><p>1. Rules created within Global Rulesets can route alerts to a service (in contrast, Service Event Rules cannot route events to other services, ensuring customers don't end up unintentionally defining infinite loops that send alerts back and forth between different services). </p>\
@@ -313,9 +316,6 @@ $('#instructions').on('click', "#validate-rules", function() {
             <p>Resolve all open incidents on the service, hit the Trigger Events button above, and try again!</p>"
 
         }
-
-        
-
     }
     
 });
@@ -324,23 +324,30 @@ $('#instructions').on('click', "#validate-rules", function() {
 <!-- Part 2: Alert Grouping -->
 $('#instructions').on('click', "#grouping", function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 2: Alert Grouping</h1>\
-            <p>PagerDuty's Event Intelligence increases employee productivity by cutting through the noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
+            <p>The next level of noise reduction and rich context is achieved with alert grouping. Often when issues arise, they may be detected by multiple monitoring tools or may trigger several alerts from a single source (i.e. a warning threshold may be crossed followed by a critical threshold, both triggering the monitoring tool to send a signal to PagerDuty/the responder). In these scenarios, responders can be flooded with notifications and struggle to understand the big picture of what's going on. <em>Are these alerts all related to a single issue or are there multiple issues ongoing concurrently?</em> The responder must sift through all the signals to understand what's going on and find the critical event that must be prioritized. With PagerDuty's alert grouping capabilities, related events are automatically grouped into incidents. </p>\
             <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#alert-grouping'>Alert Grouping</a> in the Knowledge Base!</div>\
             <p><img src='images/service-alert-grouping.png'></p>\
             <p>Alert Grouping in a nutshell - what to know:</p>\
+            <div class='lesson'>\
             <p>&bull;There are three methods of alert grouping which can be enabled on a service:</p>\
             <div class='lesson'>\
             <p>1. Time-Based Alert Grouping</p>\
+            <p>Time-Based Alert Arouping is the most blunt of the grouping methods. It looks solely at time to determine whether an alert should be grouped into an incident. </p>\
             <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/time-based-alert-grouping'>Time-Based Alert Grouping</a> in the Knowledge Base!</div></p>\
             <p>2. Intelligent Alert Grouping</p>\
+            <p>Intelligent Alert Grouping groups alerts based on alert content and human response behavior. It adapts over time based on new data or behavior seen within the scope of the service.</p>\
             <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping'>Intelligent Alert Grouping</a> in the Knowledge Base!</div></p>\
             <p>3. Content-Based Alert Grouping (<em>Coming soon!</em>)</p>\
+            </div>\
+            <p>&bull; Alerts will never be grouped into a resolved incident.</p>\
+            <p>&bull; A max of 1000 alerts will be grouped into a single incident. Once this limited is reached, the 1001st alert will trigger a new incident, even if the first is still open.</p>\
+            <p>&bull; Grouping is scoped to the service. Alerts will never be automatically grouped across services. Different services can leverage different grouping methods. </p>\
+            <p>&bull; Unlike Rulesets, alert grouping is restricted to only accounts licensed for Event Intelligence. Time-based, Intelligent, and Content-based Alert Grouping are not available on lower plans.</p>\
             </div>\
             <p>In part 2 of the exercise, we'll focus on Intelligent Alert Grouping. We've seen what the responder experience is like during an alert storm with no grouping on a service. Now let's see what the responder experience is like during that same alert storm with Intelligent Alert Grouping enabled. We'll see how the algorithm behaves out of the box, how responders can influence grouping, and how quickly training modifies grouping behavior.</p>\
             <div id='nav-bar'>\
             <button class='nav-buttons back' id='step4' type='submit'>< Go Back</button>\
             <button class='nav-buttons forward' id='step5' type='submit'>Continue ></button></div>"
-
 });
 
 
@@ -364,10 +371,6 @@ $('#instructions').on('click', "#step5", function() {
 
         var msg = document.getElementById("alert");
         msg.style.display="none";
-
-
-
-	
 });
 
 <!-- IAG Behavior - No Training -->
@@ -550,12 +553,18 @@ $('#instructions').on('click', "#intelligent-triage", function() {
             <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#intelligent-triage'>Intelligent Triage</a> in the Knowledge Base!</div>\
             <p><img class='gifs' src='gifs/intelligent-triage.gif'></p>\
             <p>Intelligent Triage in a nutshell - what to know:</p>\
-            <p>&bull;Intelligent Triage refers to two tabs responders see when they drill into an incident's details in the web interface:</p>\
+            <div class='lesson'>\
+            <p>&bull; Intelligent Triage refers to two tabs responders see when they drill into an incident's details in the web interface:</p>\
             <div class='lesson'>\
             <p>1. Past Incidents</p>\
+            <p>Past Incidents shows responders a heatmap of when similar incidents (based on the similarity of the incident title) have occured on the current service over the last 6 months. High-level details about past incidents provide responders with context on the frequency and complexity of the current issue, as well as information on which peers have experience triaging similar issues. Responders can drill down into specific historical incidents to view more detailed timeline info on how similar issues were triaged and ultimately resolved. </p>\
             <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/past-incidents'>Past Incidents</a> in the Knowledge Base!</div></p>\
             <p>2. Related Incidents</p>\
+            <p>Related Incidents provide the responder with context on what's happening now on other services and teams. This helps responders understand the scope of the issue and whether it may be caused by a dependency. Rather than triage in their silo, responders have visibility into which other teams may be affected by related issues, enabling them to collaborate.</p>\
             <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents'>Realated Incidents</a> in the Knowledge Base!</div></p>\
+            </div>\
+            <p>&bull; Related Incidents shows incidents on other services that were opened around the same time as the current incident, regardless of the incidents' statuses. This means related incidents shown could be resolved. </p>\
+            <p>&bull; If an incident has at least one related incident, responders will see a <em>View x Related Incidents</em> button on the incident details view in the mobile app. Currently there is no comparable mobile experience for Past Incidents.</p>\
             </div>\
             <p>In this final part of the exercise, we're going to focus on Related Incidents. After defining a new service and some additional event rules in our Ruleset, we'll trigger some new alerts to understand how incidents are surfaced as related and how responders can influence the related incidents list.</p>\
             <div id='nav-bar'>\
