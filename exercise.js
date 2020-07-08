@@ -30,7 +30,7 @@ $('#instructions').on('click', "#home", function() {
 <!-- Part 1: Rulesets -->
 $('#rulesets').on('click', function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
-        <p>PagerDuty's Event Intelligence increases employee productivity by cutting through the noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
+        <p>PagerDuty's Event Intelligence increases employee productivity by cutting through noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
         <p>Noise reduction and rich context is achieved via multiple steps, which begin with Ruleset functionality.</p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/global-rulesets.gif'></p>\
@@ -55,8 +55,11 @@ $('#rulesets').on('click', function() {
 
 $('#instructions').on('click', "#rulesets", function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
-        <p>Rulesets in a nutshell - what to know:</p>\
+        <p>PagerDuty's Event Intelligence increases employee productivity by cutting through noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
+        <p>Noise reduction and rich context is achieved via multiple steps, which begin with Ruleset functionality.</p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <p><img class='gifs' src='gifs/global-rulesets.gif'></p>\
+        <p>Rulesets in a nutshell - what to know:</p>\
         <div class='lesson'>\
         <p>&bull; There are two types of rulesets within PagerDuty: <strong>Global Rulesets</strong> and <strong>Service Event Rules</strong>. Both support similar functionality: with each rule, customers specify a set of actions that should be performed on events that match the defined conditions. These actions may include suppressing non-actionable signals, transforming the alert description to be more user-friendly, or decorating the alert with additional context to the alert for responders by adding a note linking to a runbook, for example. While functionality is similar across the ruleset types, there are three key differences:</p> \
         <div class='lesson'><p>1. Rules created within Global Rulesets can route alerts to a service (in contrast, Service Event Rules cannot route events to other services, ensuring customers don't end up unintentionally defining infinite loops that send alerts back and forth between different services). </p>\
@@ -66,9 +69,9 @@ $('#instructions').on('click', "#rulesets", function() {
         <div id='tip'>Learn more about when to use <a href='https://community.pagerduty.com/forum/t/service-configuration-guide/1660'>Global Rulesets vs. Service Event Rules</a> in the Community Forum!</div>\
         <p>&bull; Global Rules and Service Event Rules are not mutually exclusive! An event could pass through a Global Ruleset, be routed to a service, and further modified by that service's Event Rules.</p>\
         <p>&bull; All accounts have the ability to create Service Event Rules and rules within the Default Global Ruleset. The ability to define multiple Global Rulesets is limited to customers who have purchased Event Intelligence as an add-on or who are licensed for Digital Operations.</p>\
-        <p>&bull; Within rulesets, certain options are restricted unless an account has access to Event Intelligence. This feature suite is referred to as <strong>Advanced Event Automation</strong>. These options include: the ability to <span class='link' id='add-note'>add a note</span> to an incident, set <span class='link' id='trigger-thresholds'>trigger thresholds</span>, set a <span class='link' id='notification-delay'>notification delay</span> time (<em>coming soon)</em>, and <span class='link' id='set-schedule'>specify a schedule</span> (either fixed or recurring) for the rule to be active.</p>\
+        <p>&bull; Within rulesets, certain options are restricted unless an account has access to Event Intelligence. This feature suite is referred to as <strong>Advanced Event Automation</strong>. These options include: the ability to <span class='link' id='add-note'>add a note</span> to an incident, set <span class='link' id='trigger-thresholds'>trigger thresholds</span>, set a <span class='link' id='notification-delay'>notification delay</span> time (<em>coming soon)</em>, and <span class='link' id='set-schedule'>specify a schedule</span> (either fixed or recurring) for the rule to be active.&nbsp;</p>\
         <div id='feature' style='display: none;'></div></div>\
-        <p>Ready? For this exercise we&#39;re going to use Global Rulesets. You'll see what the user experience is like for EI accounts creating a new ruleset and setting up rules through the web interface. We'll configure some of the Advanced Event Automation options across the various rules we'll define.&nbsp;</p>\
+        <p>Ready? For this exercise we&#39;re going to use Global Rulesets. You'll see what the user experience is like for EI accounts creating a new ruleset and setting up rules through the web interface. We'll configure some of the Advanced Event Automation options across the various rules we&#39;ll define.&nbsp;</p>\
             <div id='nav-bar'>\
             <button class='nav-buttons back' id='home' type='submit'>< Go Back</button>\
             <button class='nav-buttons forward' id='step1' type='submit'>Continue ></button></div>"
@@ -329,7 +332,7 @@ $('#instructions').on('click', "#grouping", function() {
             <p><img src='images/service-alert-grouping.png'></p>\
             <p>Alert Grouping in a nutshell - what to know:</p>\
             <div class='lesson'>\
-            <p>&bull;There are three methods of alert grouping which can be enabled on a service:</p>\
+            <p>&bull; There are three methods of alert grouping which can be enabled on a service:</p>\
             <div class='lesson'>\
             <p>1. Time-Based Alert Grouping</p>\
             <p>Time-Based Alert Arouping is the most blunt of the grouping methods. It looks solely at time to determine whether an alert should be grouped into an incident. </p>\
@@ -357,7 +360,7 @@ $('#instructions').on('click', "#step5", function() {
 
 	
 		document.getElementById("instructions").innerHTML = "<h1>Enable Intelligent Alert Grouping</h1>\
-    	<p>Next let's turn on Intelligent Alert Grouping (IAG) on the service and see how the grouping alogorithm behaves without any training. </p>\
+    	<p>Next let's turn on Intelligent Alert Grouping (IAG) on the service and see how the grouping alogorithm behaves without any training. Follow the steps below: </p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping'>Intelligent Alert Grouping</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/enable-iag.gif'></p>\
         <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Services</em>.</p>\
@@ -462,7 +465,7 @@ $('#instructions').on('click', "#validate-iag", function() {
 $('#instructions').on('click', "#step7", function() {
 	
 		document.getElementById("instructions").innerHTML = "<h1>Train the Alert Grouping Algorithm</h1>\
-		<p>The Intelligent Alert Grouping alogorithm learns from responder actions, specifically the manual merging and unmerging (or regrouping) of alerts. Don't resolve the open incidents on your service yet - we're going to merge all the triggered alerts from the event storm into one incident to train the alogorithm. Merging alerts with different titles creates a correlation between those alert types, which influences the IAG algorithm to automatically group similar alerts if they occur temporally close to each other again in the future.</p>\
+		<p>The Intelligent Alert Grouping alogorithm learns from responder actions, specifically the manual merging and unmerging (or regrouping) of alerts. Don't resolve the open incidents on your service yet - we're going to merge all the triggered alerts from the event storm into one incident to train the alogorithm. Merging alerts with different titles creates a correlation between those alert types, which influences the IAG algorithm to automatically group similar alerts if they occur temporally close to each other again in the future. Follow the steps below to train the IAG algorithm on your service:</p>\
         <p><img class='gifs' src='gifs/merge-inc.gif'></p>\
         <p>1. Navigate to the <em>Incidents</em> list.</p>\
         <p>2. Select the checkboxes next to the exercise's 4 triggered incidents (or click the checkbox at the top of the incident table to select all).</p>\
@@ -550,6 +553,7 @@ $('#instructions').on('click', "#validate-iag-train", function() {
 <!-- Part 3: Intelligent Triage -->
 $('#instructions').on('click', "#intelligent-triage", function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 3: Intelligent Triage</h1>\
+            <p>The last pillar of Event Intelligence is Intelligent Triage, which surfaces relevant historical and contemporary incidents to provide responders with actionable context to triage a current incident.</p>\
             <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#intelligent-triage'>Intelligent Triage</a> in the Knowledge Base!</div>\
             <p><img class='gifs' src='gifs/intelligent-triage.gif'></p>\
             <p>Intelligent Triage in a nutshell - what to know:</p>\
@@ -564,6 +568,7 @@ $('#instructions').on('click', "#intelligent-triage", function() {
             <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents'>Realated Incidents</a> in the Knowledge Base!</div></p>\
             </div>\
             <p>&bull; Related Incidents shows incidents on other services that were opened around the same time as the current incident, regardless of the incidents' statuses. This means related incidents shown could be resolved. </p>\
+            <p>&bull; Related Incidents uses the same algorithm as Intelligent Alert Grouping. In addition to time, the similarity of incident titles is used to determine which incidents are suggested as related. The algorithm also adapts based on human behavior - related incidents are suggested based on alert correlations defined by manual merges. Responders can also upvote or downvote suggested related incidents to influence the algorithm. </p>\
             <p>&bull; If an incident has at least one related incident, responders will see a <em>View x Related Incidents</em> button on the incident details view in the mobile app. Currently there is no comparable mobile experience for Past Incidents.</p>\
             </div>\
             <p>In this final part of the exercise, we're going to focus on Related Incidents. After defining a new service and some additional event rules in our Ruleset, we'll trigger some new alerts to understand how incidents are surfaced as related and how responders can influence the related incidents list.</p>\
@@ -601,6 +606,7 @@ $('#instructions').on('click', "#step10", function() {
         document.getElementById("instructions").innerHTML = "<h1>Create New Event Rules</h1>\
         <p>We'll be sending some fresh events to the routing endpoint in the next section so we first need to set up some additional rules to handle these new events. Follow the steps below carefully to create two new rules in your ruleset:</p>\
         <p>1. Navigate to the ruleset created in part 1 (If you need a refresher, click on <em>Configuration</em>-><em>Event Rules</em> and click on the ruleset's name)\
+        <p><img src='images/exercise-rules-pt2.png'></p>\
         <p class='subtitle'>Rule 1</p>\
         <p>2. Click the <strong>+ New Event Rule</strong> button.</p>\
         <p>3. In the <em>When events match these conditions</em> section enter <strong>payload.summary</strong> in the first text box (the event field). Leave <em>contains</em> in the condition dropdown. Enter <strong>web-app01-db01</strong> in the second text box (value).</p>\
@@ -664,12 +670,26 @@ $('#instructions').on('click', "#validate-it-no-train", function() {
         var msg = document.getElementById("alert");
         msg.style.display="block";
 
-        document.getElementById("alert").innerHTML = "<div id='dismiss'>x</div>\
-        <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
-        <p>1. Ensure your new rules are configured as expected (Are alerts being routed to the correct service? Or are events being suppressed instead?)</p>\
-        <p>2. Did you drag the final rule to the top of the ruleset list (Rules are evaluated sequentially - events may be matching on other rules' conditions and handled before they hit the intended rule)</p>\
-        <p>3. Did you drill down into the correct incident (the <em>API: Request Response Time is High</em>)</p>\
-        <p>Resolve all open incidents on the service, hit the Trigger Events button above, and try again!</p>"
+        if (it_no_training_ri_ct > 1) {
+             document.getElementById("alert").innerHTML = "<div id='dismiss'>x</div>\
+            <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
+            <p>1. Did you hit the trigger button multiple times (If you see duplicate incidents on your new service this is the case)</p>\
+            <p>2. Did you drill down into the correct incident (the <em>API: Request Response Time is High</em>)</p>\
+            <p>Resolve all open incidents on both services, hit the Trigger Events button above, and try again (but only count the number of <em>triggered</em> Related Incidents in this case)!</p>"
+
+
+        } else
+        {
+             document.getElementById("alert").innerHTML = "<div id='dismiss'>x</div>\
+            <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
+            <p>1. Ensure your new rules are configured as expected (Are alerts being routed to the correct service? Or are events being suppressed instead?)</p>\
+            <p>2. Did you drag the final rule to the top of the ruleset list (Rules are evaluated sequentially - events may be matching on other rules' conditions and handled before they hit the intended rule)</p>\
+            <p>3. Did you drill down into the correct incident (the <em>API: Request Response Time is High</em>)</p>\
+            <p>Resolve all open incidents on the service, hit the Trigger Events button above, and try again (but only count the number of <em>triggered</em> Related Incidents in this case)!</p>"
+
+        }
+
+        
      }
     
 });
@@ -679,7 +699,7 @@ $('#instructions').on('click', "#validate-it-no-train", function() {
 $('#instructions').on('click', "#step12", function() {
 
         document.getElementById("instructions").innerHTML = "<h1>Train Related Incidents</h1>\
-        <p>Just like with IAG, Related Incidents also incorporates human data and learns from responder actions.</p>\
+        <p>Just like with IAG, Related Incidents also incorporates human data and learns from responder actions. We'll merge some of the new incidents to train the algorithm and see how this impacts the suggested related incidents. Follow the steps below:</p>\
         <p>1. Navigate to the <em>Incidents</em> list.</p>\
         <p>2. Select the checkboxes next to the 2 incidents triggered on the <u>first</u> service created in this exercise.</p>\
         <p>3. Click the <b>Merge Incidents</b> button.</p>\
@@ -717,7 +737,8 @@ $('#instructions').on('click', "#validate-it-train", function() {
         var msg = document.getElementById("correct");
         msg.style.display="block";
 
-        document.getElementById("correct").innerHTML = "<div id='dismiss'>x</div><p>Yes!</p>"
+        document.getElementById("correct").innerHTML = "<div id='dismiss'>x</div><p>Nice!</p>\
+        <p></p>"
         
         $('#nav-bar').html("<button class='nav-buttons back' id='step12' type='submit'>< Go Back</button>\
                 <button class='nav-buttons forward' id='step14' type='submit'>Continue ></button>");
@@ -730,9 +751,23 @@ $('#instructions').on('click', "#validate-it-train", function() {
         var msg = document.getElementById("alert");
         msg.style.display="block";
 
-        document.getElementById("alert").innerHTML = "<div id='dismiss'>x</div>\
-        <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
-        <p>Resolve all open incidents on the service, hit the Trigger Events button above, and try again!</p>"
+        if (it_training_ri_ct > 2) {
+             document.getElementById("alert").innerHTML = "<div id='dismiss'>x</div>\
+            <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
+            <p>1. Did you hit the trigger button multiple times (If you see duplicate triggered incidents on your new service this likely is the case)</p>\
+            <p>Resolve all open incidents on both services, hit the Trigger Events button above, and try again (but only count the number of <em>triggered</em> Related Incidents in this case)!</p>"
+
+
+        } else
+        {
+             document.getElementById("alert").innerHTML = "<div id='dismiss'>x</div>\
+            <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
+            <p>1. Confirm you selected all the triggered incidents on your <u>first</u> service and merged them before triggering the alert sequence </p>\
+            <p>Resolve all open incidents on both services, hit the Trigger Events button above, and try again (but only count the number of <em>triggered</em> Related Incidents in this case)!</p>"
+
+        }
+
+       
      }
     
 });
@@ -806,7 +841,7 @@ $('#instructions').on('click', "#trigger", function() {
 
             }
             if (step == 13){
-                $('#counter').html("<p>Check your subdomain. Click on the <em>API: Request Response Time is High</em> incident which triggered on your first service to drill down into it's details. Click on the Related Incidents tab. How many related incidents are suggested this time? Input the count below:</p>\
+                $('#counter').html("<p>Check your subdomain. Click on the <em>API: Request Response Time is High</em> incident which triggered on your first service to drill down into it's details. Click on the Related Incidents tab. How many related incidents are suggested this time (count <u>only</u> incidents that are in a triggered state)? Input the count below:</p>\
                 <p><input type='text' id='it_training_ri_ct' placeholder='Incidents' required autofocus><button class='submit' id='validate-it-train' type='submit'>Submit</button></p>\
                 <div id='alert' style='display: none;'></div><div id='correct' style='display: none;'></div><div id='correct' style='display: none;'></div>");
 
