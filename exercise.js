@@ -29,6 +29,7 @@ $('#instructions').on('click', "#home", function() {
 
 <!-- Part 1: Rulesets -->
 $('#rulesets').on('click', function() {
+
         document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
         <p>PagerDuty's Event Intelligence increases employee productivity by cutting through noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
         <p>Noise reduction and rich context is achieved via multiple steps, which begin with Ruleset functionality.</p>\
@@ -80,6 +81,7 @@ $('#instructions').on('click', "#rulesets", function() {
 
 $('#instructions').on('click', "#add-note", function() {
 
+
             var msg = document.getElementById("feature");
             msg.style.display="block";
 
@@ -116,6 +118,8 @@ $('#instructions').on('click', "#notification-delay", function() {
 
 <!-- Create Service -->
 $('#instructions').on('click', "#step1", function() {
+    newrelic.addPageAction('Step1');
+
     document.getElementById("instructions").innerHTML = "<h1>Create a Service</h1>\
         <p>In this exercise, we'll use a ruleset to route incoming events. Before we create the rules, we need a service to route events to! We'll use a new service for this exercise to avoid any behavior conflicts that could arise from a pre-existing service. Follow the steps below to create a new service in your subdomain: </p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/services-and-integrations'>Services and Integrations</a> in the Knowledge Base!</div>\
@@ -173,13 +177,19 @@ $('#instructions').on('click', "#step2", function() {
 
 <!-- Create Rules -->
 $('#instructions').on('click', "#step3", function() {
-	if (routing_key == "key" || routing_key == "") {
-        routing_key = $('#endpoint').val();
+    console.log('Clicking on button for step 3. routing key is '+routing_key)
+	if (routing_key == "key" || routing_key == "" || routing_key.match(key_regex)) {
+
+        if (element = document.getElementById("endpoint")) {
+            routing_key = $('#endpoint').val();
+            console.log('routing key is now '+routing_key)
+        }
         key_regex = /^R/;
+
 
         if (routing_key.match(key_regex)) {
             TriggerSampleEvents(routing_key);
-
+            newrelic.setCustomAttribute('routing_key', routing_key)
 
             document.getElementById("instructions").innerHTML = "<h1>Create Rules</h1>\
             	<p>Now we'll create rules to handle the events triggered in this exercise, incorporating some of the advanced event automation options. If you navigated away after creating the new ruleset, navigate back via <em>Configuration</em> -> <em>Event Rules</em> and click on the ruleset's name. Follow the steps below to create the 4 rules shown:</p>\
@@ -719,7 +729,7 @@ $('#instructions').on('click', "#step13", function() {
         <p>Before you proceed - resolve any lingering incidents that are open on your exercise services. Click the button below to a new series of alerts. As before, events will be sent to the routing key you pasted in earlier (<span class='key'>"+routing_key+"</span>).</p>\
         <div class='center'><button class='trigger-buttons' id='trigger' type='submit'>Trigger Events</button></div>\
         <div id='counter' style='display: block;'></div>\
-        <div id='nav-bar'><button class='nav-buttons back' id='step10' type='submit'>< Go Back</button></div>"
+        <div id='nav-bar'><button class='nav-buttons back' id='step12' type='submit'>< Go Back</button></div>"
    
 
 });
@@ -788,7 +798,6 @@ $('#instructions').on('click', "#trigger", function() {
 
 
     var countdown = 31; 
-    //var countdown = 3; 
 
     if (step == 4 || step == 6 || step == 8){
         TriggerAlertStorm(routing_key);
