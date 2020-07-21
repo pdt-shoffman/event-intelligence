@@ -13,7 +13,7 @@ $('#instructions').on('click', "#home", function() {
 
     document.getElementById("instructions").innerHTML = "<h1>Event Intelligence 101</h1>\
             <p> Welcome to this hands-on exercise that is designed to introduce you to the core Event Intelligence (EI) capabilities! Throughout, you'll find callouts (like the one below) which direct you to resources in the Knowledge Base where you can go to find more information on the current topic.</p>\
-            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence'>Event Intelligence</a> in the Knowledge Base!</div>\
+            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence' target='_blank'>Event Intelligence</a> in the Knowledge Base!</div>\
             <p>The exercise will be broken up into three sections that align to the pillars of EI:</p>\
             <p class='subtitle'>&bull; Part 1: Rulesets and Advanced Event Automation </p>\
             <p class='subtitle'>&bull; Part 2: Alert Grouping</p>\
@@ -33,7 +33,7 @@ $('#rulesets').on('click', function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
         <p>PagerDuty's Event Intelligence increases employee productivity by cutting through noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
         <p>Noise reduction and rich context is achieved via multiple steps, which begin with Ruleset functionality.</p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/global-rulesets.gif'></p>\
         <p>Rulesets in a nutshell - what to know:</p>\
         <div class='lesson'>\
@@ -42,7 +42,7 @@ $('#rulesets').on('click', function() {
         <p>2. Second, currently Service Event Rules do not support event rules for email integrations. </p>\
         <p>3. Finally, APIs: customers can create new Global Rulesets and manage rules within them programmatically (whether directly via the PagerDuty REST API or through a provider like Terraform). No comparable API for Service Event Rules exists today (yet!).</p>\
         </div>\
-        <div id='tip'>Learn more about when to use <a href='https://community.pagerduty.com/forum/t/service-configuration-guide/1660'>Global Rulesets vs. Service Event Rules</a> in the Community Forum!</div>\
+        <div id='tip'>Learn more about when to use <a href='https://community.pagerduty.com/forum/t/service-configuration-guide/1660' target='_blank'>Global Rulesets vs. Service Event Rules</a> in the Community Forum!</div>\
         <p>&bull; Global Rules and Service Event Rules are not mutually exclusive! An event could pass through a Global Ruleset, be routed to a service, and further modified by that service's Event Rules.</p>\
         <p>&bull; All accounts have the ability to create Service Event Rules and rules within the Default Global Ruleset. The ability to define multiple Global Rulesets is limited to customers who have purchased Event Intelligence as an add-on or who are licensed for Digital Operations.</p>\
         <p>&bull; Within rulesets, certain options are restricted unless an account has access to Event Intelligence. This feature suite is referred to as <strong>Advanced Event Automation</strong>. These options include: the ability to <span class='link' id='add-note'>add a note</span> to an incident, set <span class='link' id='trigger-thresholds'>trigger thresholds</span>, set a <span class='link' id='notification-delay'>notification delay</span> time (<em>coming soon)</em>, and <span class='link' id='set-schedule'>specify a schedule</span> (either fixed or recurring) for the rule to be active.&nbsp;</p>\
@@ -58,7 +58,7 @@ $('#instructions').on('click', "#rulesets", function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 1: Rulesets and Advanced Event Automation</h1>\
         <p>PagerDuty's Event Intelligence increases employee productivity by cutting through noise to route actionable signals to the right resource with the relevant context to efficiently triage the issue at hand. Reducing noise helps prevent alert fatigue, which can lead to responder burnout and attrition, as well as mitigate business disruptions by ensuring responders are focused on the issues that matter and are provided critical context they need to resolve those issues faster.</p>\
         <p>Noise reduction and rich context is achieved via multiple steps, which begin with Ruleset functionality.</p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/global-rulesets.gif'></p>\
         <p>Rulesets in a nutshell - what to know:</p>\
         <div class='lesson'>\
@@ -67,7 +67,7 @@ $('#instructions').on('click', "#rulesets", function() {
         <p>2. Second, currently Service Event Rules do not support event rules for email integrations. </p>\
         <p>3. Finally, APIs: customers can create new Global Rulesets and manage rules within them programmatically (whether directly via the PagerDuty REST API or through a provider like Terraform). No comparable API for Service Event Rules exists today (yet!).</p>\
         </div>\
-        <div id='tip'>Learn more about when to use <a href='https://community.pagerduty.com/forum/t/service-configuration-guide/1660'>Global Rulesets vs. Service Event Rules</a> in the Community Forum!</div>\
+        <div id='tip'>Learn more about when to use <a href='https://community.pagerduty.com/forum/t/service-configuration-guide/1660' target='_blank'>Global Rulesets vs. Service Event Rules</a> in the Community Forum!</div>\
         <p>&bull; Global Rules and Service Event Rules are not mutually exclusive! An event could pass through a Global Ruleset, be routed to a service, and further modified by that service's Event Rules.</p>\
         <p>&bull; All accounts have the ability to create Service Event Rules and rules within the Default Global Ruleset. The ability to define multiple Global Rulesets is limited to customers who have purchased Event Intelligence as an add-on or who are licensed for Digital Operations.</p>\
         <p>&bull; Within rulesets, certain options are restricted unless an account has access to Event Intelligence. This feature suite is referred to as <strong>Advanced Event Automation</strong>. These options include: the ability to <span class='link' id='add-note'>add a note</span> to an incident, set <span class='link' id='trigger-thresholds'>trigger thresholds</span>, set a <span class='link' id='notification-delay'>notification delay</span> time (<em>coming soon)</em>, and <span class='link' id='set-schedule'>specify a schedule</span> (either fixed or recurring) for the rule to be active.&nbsp;</p>\
@@ -122,7 +122,7 @@ $('#instructions').on('click', "#step1", function() {
 
     document.getElementById("instructions").innerHTML = "<h1>Create a Service</h1>\
         <p>In this exercise, we'll use a ruleset to route incoming events. Before we create the rules, we need a service to route events to! We'll use a new service for this exercise to avoid any behavior conflicts that could arise from a pre-existing service. Follow the steps below to create a new service in your subdomain: </p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/services-and-integrations'>Services and Integrations</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/services-and-integrations' target='_blank'>Services and Integrations</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-service.gif'></p>\
         <p>1. Within your subdomain navigate to <em>Configuration</em> -&gt; <em>Services</em>.</p>\
         <p>2. Click the <strong>New Service</strong> button.</p>\
@@ -142,7 +142,7 @@ $('#instructions').on('click', "#step2", function() {
     if (routing_key == "key") {
         document.getElementById("instructions").innerHTML = "<h1>Create a Ruleset</h1>\
         <p>Next create a new ruleset. We'll use this ruleset instead of the Default Global Ruleset to avoid any conflicts with existing rules you may have already defined in your subdomain. Events will be sent to this endpoint throughout the exercise. </p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
         <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
         <p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
@@ -158,7 +158,7 @@ $('#instructions').on('click', "#step2", function() {
     } else {
         document.getElementById("instructions").innerHTML = "<h1>Create a Ruleset</h1>\
         <p>Next create a new ruleset. We'll use this ruleset instead of the Default Global Ruleset to avoid any conflicts with existing rules you may have already defined in your account. Events will be sent to this endpoint throughout the exercise.</p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets'>Rulesets</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
         <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
         <p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
@@ -338,7 +338,7 @@ $('#instructions').on('click', "#validate-rules", function() {
 $('#instructions').on('click', "#grouping", function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 2: Alert Grouping</h1>\
             <p>The next level of noise reduction and rich context is achieved with alert grouping. Often when issues arise, they may be detected by multiple monitoring tools or may trigger several alerts from a single source (i.e. a warning threshold may be crossed followed by a critical threshold, both triggering the monitoring tool to send a signal to PagerDuty/the responder). In these scenarios, responders can be flooded with notifications and struggle to understand the big picture of what's going on. <em>Are these alerts all related to a single issue or are there multiple issues ongoing concurrently?</em> The responder must sift through all the signals to understand what's going on and find the critical event that must be prioritized. With PagerDuty's alert grouping capabilities, related events are automatically grouped into incidents. </p>\
-            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#alert-grouping'>Alert Grouping</a> in the Knowledge Base!</div>\
+            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#alert-grouping' target='_blank'>Alert Grouping</a> in the Knowledge Base!</div>\
             <p><img src='images/service-alert-grouping.png'></p>\
             <p>Alert Grouping in a nutshell - what to know:</p>\
             <div class='lesson'>\
@@ -346,10 +346,10 @@ $('#instructions').on('click', "#grouping", function() {
             <div class='lesson'>\
             <p>1. Time-Based Alert Grouping</p>\
             <p>Time-Based Alert Arouping is the most blunt of the grouping methods. It looks solely at time to determine whether an alert should be grouped into an incident. </p>\
-            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/time-based-alert-grouping'>Time-Based Alert Grouping</a> in the Knowledge Base!</div></p>\
+            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/time-based-alert-grouping' target='_blank'>Time-Based Alert Grouping</a> in the Knowledge Base!</div></p>\
             <p>2. Intelligent Alert Grouping</p>\
             <p>Intelligent Alert Grouping groups alerts based on alert content and human response behavior. It adapts over time based on new data or behavior seen within the scope of the service.</p>\
-            <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping'>Intelligent Alert Grouping</a> in the Knowledge Base!</div></p>\
+            <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping' target='_blank'>Intelligent Alert Grouping</a> in the Knowledge Base!</div></p>\
             <p>3. Content-Based Alert Grouping (<em>Coming soon!</em>)</p>\
             </div>\
             <p>&bull; Alerts will never be grouped into a resolved incident.</p>\
@@ -371,7 +371,7 @@ $('#instructions').on('click', "#step5", function() {
 	
 		document.getElementById("instructions").innerHTML = "<h1>Enable Intelligent Alert Grouping</h1>\
     	<p>Next let's turn on Intelligent Alert Grouping (IAG) on the service and see how the grouping alogorithm behaves without any training. Follow the steps below: </p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping'>Intelligent Alert Grouping</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping' target='_blank'>Intelligent Alert Grouping</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/enable-iag.gif'></p>\
         <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Services</em>.</p>\
 		<p>2. Search for your service or find it in the list and click on the service name to view the service's profile.</p>\
@@ -564,7 +564,7 @@ $('#instructions').on('click', "#validate-iag-train", function() {
 $('#instructions').on('click', "#intelligent-triage", function() {
         document.getElementById("instructions").innerHTML = "<h1>Part 3: Intelligent Triage</h1>\
             <p>The last pillar of Event Intelligence is Intelligent Triage, which surfaces relevant historical and contemporary incidents to provide responders with actionable context to triage a current incident.</p>\
-            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#intelligent-triage'>Intelligent Triage</a> in the Knowledge Base!</div>\
+            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/event-intelligence#intelligent-triage' target='_blank'>Intelligent Triage</a> in the Knowledge Base!</div>\
             <p><img class='gifs' src='gifs/intelligent-triage.gif'></p>\
             <p>Intelligent Triage in a nutshell - what to know:</p>\
             <div class='lesson'>\
@@ -572,10 +572,10 @@ $('#instructions').on('click', "#intelligent-triage", function() {
             <div class='lesson'>\
             <p>1. Past Incidents</p>\
             <p>Past Incidents shows responders a heatmap of when similar incidents (based on the similarity of the incident title) have occured on the current service over the last 6 months. High-level details about past incidents provide responders with context on the frequency and complexity of the current issue, as well as information on which peers have experience triaging similar issues. Responders can drill down into specific historical incidents to view more detailed timeline info on how similar issues were triaged and ultimately resolved. </p>\
-            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/past-incidents'>Past Incidents</a> in the Knowledge Base!</div></p>\
+            <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/past-incidents' target='_blank'>Past Incidents</a> in the Knowledge Base!</div></p>\
             <p>2. Related Incidents</p>\
             <p>Related Incidents provide the responder with context on what's happening now on other services and teams. This helps responders understand the scope of the issue and whether it may be caused by a dependency. Rather than triage in their silo, responders have visibility into which other teams may be affected by related issues, enabling them to collaborate.</p>\
-            <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents'>Realated Incidents</a> in the Knowledge Base!</div></p>\
+            <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents' target='_blank'>Realated Incidents</a> in the Knowledge Base!</div></p>\
             </div>\
             <p>&bull; Related Incidents shows incidents on other services that were opened around the same time as the current incident, regardless of the incidents' statuses. This means related incidents shown could be resolved. </p>\
             <p>&bull; Related Incidents uses the same algorithm as Intelligent Alert Grouping. In addition to time, the similarity of incident titles is used to determine which incidents are suggested as related. The algorithm also adapts based on human behavior - related incidents are suggested based on alert correlations defined by manual merges. Responders can also upvote or downvote suggested related incidents to influence the algorithm. </p>\
@@ -593,7 +593,7 @@ $('#instructions').on('click', "#step9", function() {
 
         document.getElementById("instructions").innerHTML = "<h1>Create Another Service</h1>\
         <p>Intelligent Triage's Related Incidents provides responders visibility into potentially correlated issues happening on other PagerDuty services. To see this in action, create a second new service in your subdomain following the steps below:</p>\
-        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents'>Related Incidents</a> in the Knowledge Base!</div>\
+        <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents' target='_blank'>Related Incidents</a> in the Knowledge Base!</div>\
         <p>1. Within your subdomain navigate to <em>Configuration</em> -&gt; <em>Services</em>.</p>\
         <p>2. Click the <strong>New Service</strong> button.</p>\
         <p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
