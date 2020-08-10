@@ -223,9 +223,8 @@ $('#instructions').on('click', "#step3", function() {
                 <p>23. Click <strong>Do these things</strong> to expand the section.</p>\
                 <p>24. Click the radio option next to <strong>Create an incident on a service</strong> on the left-hand side.&nbsp;</p>\
                 <p>25. Select the service you created earlier in the exercise from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
-                <p>26. Under <em>Incident Creation</em> select the radio option next to <strong>Suppress, but create with triggering thresholds</strong>. Enter <strong>3</strong> for the number of times and <strong>2</strong> for the number of minutes (leave the time dropdown set to&nbsp;<em>minutes</em>).&nbsp;</p>\
-                <p>27. Under <em>Alert Behavior</em> click the checkbox next to <strong>Set Priority&nbsp;</strong>and select <strong>P1</strong> from the dropdown.</p>\
-                <p>28. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
+                <p>26. Under <em>Alert Behavior</em> click the checkbox next to <strong>Set Priority&nbsp;</strong>and select <strong>P1</strong> from the dropdown.</p>\
+                <p>27. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
                 <p><br></p>\
                 <div id='nav-bar'><button class='nav-buttons back' id='step2' type='submit'>< Go Back</button>\
             	<button class='nav-buttons forward' id='step4' type='submit'>Continue ></button></div>"
@@ -1085,7 +1084,7 @@ var newrelic = {
         }
     };
 
-	var events = [nagios, nagios, nagios, datadog1, splunk, datadog2, newrelic, newrelic, newrelic, newrelic, newrelic, newrelic];
+	var events = [nagios, nagios, nagios, datadog1, splunk, datadog2, newrelic, newrelic, newrelic];
 	var event;
 	var delay = 2000;
 
