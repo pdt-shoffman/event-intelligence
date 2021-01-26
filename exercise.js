@@ -349,7 +349,9 @@ $('#instructions').on('click', "#grouping", function() {
             <p>2. Intelligent Alert Grouping</p>\
             <p>Intelligent Alert Grouping groups alerts based on alert content and human response behavior. It adapts over time based on new data or behavior seen within the scope of the service.</p>\
             <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping' target='_blank'>Intelligent Alert Grouping</a> in the Knowledge Base!</div></p>\
-            <p>3. Content-Based Alert Grouping (<em>Coming soon!</em>)</p>\
+            <p>3. Content-Based Alert Grouping</p>\
+	    <p>With Content Based Alert Grouping, alerts that share an exact match on a set of chosen fields will be grouped together into the most recent open incident.</p>\
+	    <p><div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/content-based-alert-grouping' target='_blank'>Content-Based Alert Grouping</a> in the Knowledge Base!</div></p>\
             </div>\
             <p>&bull; Alerts will never be grouped into a resolved incident.</p>\
             <p>&bull; A max of 1000 alerts will be grouped into a single incident. Once this limited is reached, the 1001st alert will trigger a new incident, even if the first is still open.</p>\
