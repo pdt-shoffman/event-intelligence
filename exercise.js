@@ -124,7 +124,7 @@ $('#instructions').on('click', "#step1", function() {
         <p>In this exercise, we'll use a ruleset to route incoming events. Before we create the rules, we need a service to route events to! We'll use a new service for this exercise to avoid any behavior conflicts that could arise from a pre-existing service. Follow the steps below to create a new service in your subdomain: </p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/services-and-integrations' target='_blank'>Services and Integrations</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-service.gif'></p>\
-        <p>1. Within your subdomain navigate to <em>Configuration</em> -&gt; <em>Services</em>.</p>\
+        <p>1. Within your subdomain navigate to <em>Services</em> -&gt; <em>Service Directory</em>.</p>\
         <p>2. Click the <strong>New Service</strong> button.</p>\
         <p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
         <p>4. Under&nbsp;<em>Integration Settings</em> choose the option&nbsp;<strong>Don't use an integration</strong>.</p>\
@@ -144,7 +144,7 @@ $('#instructions').on('click', "#step2", function() {
         <p>Next create a new ruleset. We'll use this ruleset instead of the Default Global Ruleset to avoid any conflicts with existing rules you may have already defined in your subdomain. Events will be sent to this endpoint throughout the exercise. </p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
-        <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
+        <p>1. Navigate to&nbsp;<em>Services&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
         <p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
         <p>3. Enter a&nbsp;<em>Title</em> for the ruleset.</p>\
         <p>4. Click&nbsp;<strong>Create Ruleset</strong> to save.</p>\
@@ -160,7 +160,7 @@ $('#instructions').on('click', "#step2", function() {
         <p>Next create a new ruleset. We'll use this ruleset instead of the Default Global Ruleset to avoid any conflicts with existing rules you may have already defined in your account. Events will be sent to this endpoint throughout the exercise.</p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
-        <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
+        <p>1. Navigate to&nbsp;<em>Services&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
         <p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
         <p>3. Enter a&nbsp;<em>Title</em> for the ruleset.</p>\
         <p>4. Click&nbsp;<strong>Create Ruleset</strong> to save.</p>\
@@ -372,7 +372,7 @@ $('#instructions').on('click', "#step5", function() {
     	<p>Next let's turn on Intelligent Alert Grouping (IAG) on the service and see how the grouping alogorithm behaves without any training. Follow the steps below: </p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/intelligent-alert-grouping' target='_blank'>Intelligent Alert Grouping</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/enable-iag.gif'></p>\
-        <p>1. Navigate to&nbsp;<em>Configuration&nbsp;</em>-&gt;&nbsp;<em>Services</em>.</p>\
+        <p>1. Navigate to&nbsp;<em>Services&nbsp;</em>-&gt;&nbsp;<em>Service Directory</em>.</p>\
 		<p>2. Search for your service or find it in the list and click on the service name to view the service's profile.</p>\
 		<p>3. Click on the&nbsp;<strong>Response</strong> tab.</p>\
 		<p>3. In the Automate section, click on the <strong>Edit</strong> link below&nbsp;<em>Alert Grouping</em>.</p>\
@@ -593,7 +593,7 @@ $('#instructions').on('click', "#step9", function() {
         document.getElementById("instructions").innerHTML = "<h1>Create Another Service</h1>\
         <p>Intelligent Triage's Related Incidents provides responders visibility into potentially correlated issues happening on other PagerDuty services. To see this in action, create a second new service in your subdomain following the steps below:</p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents' target='_blank'>Related Incidents</a> in the Knowledge Base!</div>\
-        <p>1. Within your subdomain navigate to <em>Configuration</em> -&gt; <em>Services</em>.</p>\
+        <p>1. Within your subdomain navigate to <em>Services</em> -&gt; <em>Service Directory</em>.</p>\
         <p>2. Click the <strong>New Service</strong> button.</p>\
         <p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
         <p>4. Under&nbsp;<em>Integration Settings</em> choose the option&nbsp;<strong>Don't use an integration</strong>.</p>\
@@ -614,7 +614,7 @@ $('#instructions').on('click', "#step10", function() {
 
         document.getElementById("instructions").innerHTML = "<h1>Create New Event Rules</h1>\
         <p>We'll be sending some fresh events to the routing endpoint in the next section so we first need to set up some additional rules to handle these new events. Follow the steps below carefully to create two new rules in your ruleset:</p>\
-        <p>1. Navigate to the ruleset created in part 1 (If you need a refresher, click on <em>Configuration</em>-><em>Event Rules</em> and click on the ruleset's name)\
+        <p>1. Navigate to the ruleset created in part 1 (If you need a refresher, click on <em>Services</em>-><em>Event Rules</em> and click on the ruleset's name)\
         <p><img src='images/exercise-rules-pt2.png'></p>\
         <p class='subtitle'>Rule 1</p>\
         <p>2. Click the <strong>+ New Event Rule</strong> button.</p>\
