@@ -129,6 +129,7 @@ $('#instructions').on('click', "#step1", function() {
         <p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
         <p>4. Under&nbsp;<em>Integration Settings</em> choose the option&nbsp;<strong>Don't use an integration</strong>.</p>\
         <p>5. Select an EP from the&nbsp;<em>Escalation Policy</em> dropdown.</p>\
+        <div id='tip'>Note: If you are completing the exercise in a brand new subdomain you may only see one escalation policy in the dropdown. The Default escalation policy is created when a new trial account is provisioned. It has a single layer with the Account Owner as the primary responder. You can use the existing Default EP for the purposes of this exercise.</div>\
         <p>6. Select&nbsp;<strong>Use alert severity to determine how responders are notified for each incident</strong> from the&nbsp;<em>How should responders be notified?</em> dropdown.</p>\
         <p>7. Leave all other settings as the default and click the&nbsp;<strong>Add Service</strong> button.</p>\
         <div id='nav-bar'>\
@@ -201,6 +202,7 @@ $('#instructions').on('click', "#step3", function() {
                 <p>4. Click the radio option next to <strong>Create an incident on a service</strong> on the left-hand side.&nbsp;</p>\
                 <p>5. Select the service you created earlier in the exercise from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
                 <p>6. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
+                <p><br/></p>\
                 <p class='subtitle'>Rule 2</p>\
                 <p>7. Click the <strong>+ New Event Rule</strong> button.</p>\
                 <p>8. In the <em>When events match these conditions</em> section enter <strong>payload.summary</strong> in the first text box (the event field). Leave <em>contains</em> in the condition dropdown. Enter <strong>mysql_long_running_query</strong> in the second text box (value).</p>\
@@ -209,6 +211,7 @@ $('#instructions').on('click', "#step3", function() {
                 <p>11. Select the service you created earlier in the exercise from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
                 <p>12. Under <em>Alert Behavior</em> click the checkbox next to <strong>Set Severity&nbsp;</strong>and select <strong>warning</strong> from the dropdown.</p>\
                 <p>13. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
+                <p><br/></p>\
                 <p class='subtitle'>Rule 3</p>\
                 <p>14. Click the <strong>+ New Event Rule</strong> button.</p>\
                 <p>15. In the <em>When events match these conditions</em> section enter <strong>payload.summary</strong> in the first text box (the event field). Leave <em>contains</em> in the condition dropdown. Enter <strong>Error connecting to MySQL</strong> in the second text box (value).</p>\
@@ -217,6 +220,7 @@ $('#instructions').on('click', "#step3", function() {
                 <p>18. Select the service you created earlier in the exercise from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
                 <p>19. Under <em>Additional Context&nbsp;</em>enter a note to be added to the incident: &quot;<em>Potentially a database issue - follow triage steps in the runbook https://runbook.com</em></p>\
                 <p>20. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
+                <p><br/></p>\
                 <p class='subtitle'>Rule 4</p>\
                 <p>21. Click the <strong>+ New Event Rule</strong> button.</p>\
                 <p>22. In the <em>When events match these conditions</em> section enter <strong>payload.summary</strong> in the first text box (the event field). Leave <em>contains</em> in the condition dropdown. Enter <strong>API Health Check</strong> in the second text box (value).</p>\
@@ -499,7 +503,7 @@ $('#instructions').on('click', "#step8", function() {
         <div id='counter' style='display: block;'></div>\
         <div id='nav-bar'><button class='nav-buttons back' id='step7' type='submit'>< Go Back</button></div>"
    
-   if (iag_training_inc_ct == 1){
+   if (iag_training_inc_ct == 1 || iag_training_inc_ct == 2){
         $('#counter').html("<p>Check your subdomain. How many incidents were triggered on your service? Input the count below:</p>\
                 <p><input type='text' id='iag-training-inc-ct' value='1' required autofocus><button class='submit' id='validate-iag-train' type='submit'>Submit</button></p>\
                 <div id='alert' style='display: none;'></div><div id='correct' style='display: none;'></div><div id='correct' style='display: none;'></div>");
@@ -528,7 +532,7 @@ $('#instructions').on('click', "#validate-iag-train", function() {
 
     iag_training_inc_ct = $('#iag-training-inc-ct').val();
     
-    if (iag_training_inc_ct == 1) {
+    if (iag_training_inc_ct == 1 || iag_training_inc_ct == 2 ) {
 
         var msg = document.getElementById("alert");
         msg.style.display="none";
@@ -624,14 +628,15 @@ $('#instructions').on('click', "#step10", function() {
         <p>3. In the <em>When events match these conditions</em> section enter <strong>payload.summary</strong> in the first text box (the event field). Leave <em>contains</em> in the condition dropdown. Enter <strong>web-app01-db01</strong> in the second text box (value).</p>\
         <p>4. Click <strong>Do these things</strong> to expand the section.</p>\
         <p>5. Click the radio option next to <strong>Create an incident on a service</strong> on the left-hand side.&nbsp;</p>\
-        <p>6. Select the service you created earlier in the exercise from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
+        <p>6. Select the service you created earlier in the exercise (the first service) from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
         <p>7. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
+        <p><br/></p>\
         <p class='subtitle'>Rule 2</p>\
         <p>8. Click the <strong>+ New Event Rule</strong> button.</p>\
         <p>9. In the <em>When events match these conditions</em> section enter <strong>payload.custom_details.exercise</strong> in the first text box (the event field). Leave <em>contains</em> in the condition dropdown. Enter <strong>Intelligent Triage</strong> in the second text box (value).</p>\
         <p>10. Click <strong>Do these things</strong> to expand the section.</p>\
         <p>11. Click the radio option next to <strong>Create an incident on a service</strong> on the left-hand side.&nbsp;</p>\
-        <p>12. Select the <u>new</u> service you just created from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
+        <p>12. Select the <u>new</u> service you just created (the second service) from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
         <p>13. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
         <p>14. Click and drag this last rule from the bottom of the rule list to the top so it the first rule in the ruleset.</p>\
         <div id='nav-bar'><button class='nav-buttons back' id='step9' type='submit'>< Go Back</button>\
@@ -1089,7 +1094,7 @@ var newrelic = {
 
 	var events = [nagios, nagios, nagios, datadog1, splunk, datadog2, newrelic, newrelic, newrelic];
 	var event;
-	var delay = 2000;
+	var delay = 3000;
 
 	for (event of events) {
 
