@@ -227,7 +227,10 @@ $('#instructions').on('click', "#step3", function() {
                 <p>23. Click <strong>Do these things</strong> to expand the section.</p>\
                 <p>24. Click the radio option next to <strong>Create an incident on a service</strong> on the left-hand side.&nbsp;</p>\
                 <p>25. Select the service you created earlier in the exercise from the <em>Route to a Service&nbsp;</em>dropdown.&nbsp;</p>\
-                <p>26. Under <em>Alert Behavior</em> click the checkbox next to <strong>Set Priority&nbsp;</strong>and select <strong>P1</strong> from the dropdown.</p>\
+                <p>26. Under <em>Alert Behavior</em> click the checkbox next to <strong>Set Priority</strong> and select <strong>P1</strong> from the dropdown.</p>\
+                <div id='tip'>Note: If you are completing the exercise in a brand new subdomain the option to Set Priority may be greyed out. Priorities must first be enabled at the account level. Click the <em>enable and configure your priorities</em> link from the rule wizard to go directly to the priorities tab in Account Settings. Click the Enable Incident Priority Levels button. Note that you will need to be logged in as the Account Owner to complete this step. Leave the default priority labels and return to your ruleset to create Rule 4.\
+                <br/><br/>\
+                You can alternatively navigate to the tab when logged in as the Account Owner by hoving over your avatar on the upper-right side of the screen, selecting Account Settings from the dropdown, and clicking on the Incident Priorities tab.</div>\
                 <p>27. Leave all other options as default and click the <strong>Save Rule&nbsp;</strong>button.</p>\
                 <p><br></p>\
                 <div id='nav-bar'><button class='nav-buttons back' id='step2' type='submit'>< Go Back</button>\
