@@ -126,12 +126,10 @@ $('#instructions').on('click', "#step1", function() {
         <p><img class='gifs' src='gifs/create-service.gif'></p>\
         <p>1. Within your subdomain navigate to <em>Services</em> -&gt; <em>Service Directory</em>.</p>\
         <p>2. Click the <strong>New Service</strong> button.</p>\
-        <p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
-        <p>4. Under&nbsp;<em>Integration Settings</em> choose the option&nbsp;<strong>Don't use an integration</strong>.</p>\
-        <p>5. Select an EP from the&nbsp;<em>Escalation Policy</em> dropdown.</p>\
-        <div id='tip'>Note: If you are completing the exercise in a brand new subdomain you may only see one escalation policy in the dropdown. The Default escalation policy is created when a new trial account is provisioned. It has a single layer with the Account Owner as the primary responder. You can use the existing Default EP for the purposes of this exercise.</div>\
-        <p>6. Select&nbsp;<strong>Use alert severity to determine how responders are notified for each incident</strong> from the&nbsp;<em>How should responders be notified?</em> dropdown.</p>\
-        <p>7. Leave all other settings as the default and click the&nbsp;<strong>Add Service</strong> button.</p>\
+        <p>3. Enter a <em>Name&nbsp;</em>for the service and then click <strong>Next</strong></p>\
+        <p>4. Leave the <strong>Generate a new Escalation Policy</strong> option selected on the Assign step and click <strong>Next</strong></p>\
+        <p>5. Select the option to <strong>Turn Off Alert Grouping</strong> and click <strong>Next</strong></p>\
+        <p>6. On the final step, click the <strong>Create service without an integration</strong> link at the bottom of the wizard</p>\
         <div id='nav-bar'>\
             <button class='nav-buttons back' id='rulesets' type='submit'>< Go Back</button>\
             <button class='nav-buttons forward' id='step2' type='submit'>Continue ></button></div>"
@@ -145,7 +143,7 @@ $('#instructions').on('click', "#step2", function() {
         <p>Next create a new ruleset. We'll use this ruleset instead of the Default Global Ruleset to avoid any conflicts with existing rules you may have already defined in your subdomain. Events will be sent to this endpoint throughout the exercise. </p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
-        <p>1. Navigate to&nbsp;<em>Services&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
+        <p>1. Navigate to&nbsp;<em>Automation&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
         <p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
         <p>3. Enter a&nbsp;<em>Title</em> for the ruleset.</p>\
         <p>4. Click&nbsp;<strong>Create Ruleset</strong> to save.</p>\
@@ -161,7 +159,7 @@ $('#instructions').on('click', "#step2", function() {
         <p>Next create a new ruleset. We'll use this ruleset instead of the Default Global Ruleset to avoid any conflicts with existing rules you may have already defined in your account. Events will be sent to this endpoint throughout the exercise.</p>\
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/rulesets' target='_blank'>Rulesets</a> in the Knowledge Base!</div>\
         <p><img class='gifs' src='gifs/create-ruleset.gif'></p>\
-        <p>1. Navigate to&nbsp;<em>Services&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
+        <p>1. Navigate to&nbsp;<em>Automation&nbsp;</em>-&gt;&nbsp;<em>Event Rules</em>.</p>\
         <p>2. Click on the&nbsp;<strong>Create Ruleset</strong> button.</p>\
         <p>3. Enter a&nbsp;<em>Title</em> for the ruleset.</p>\
         <p>4. Click&nbsp;<strong>Create Ruleset</strong> to save.</p>\
@@ -193,7 +191,7 @@ $('#instructions').on('click', "#step3", function() {
             newrelic.setCustomAttribute('routing_key', routing_key)
 
             document.getElementById("instructions").innerHTML = "<h1>Create Rules</h1>\
-            	<p>Now we'll create rules to handle the events triggered in this exercise, incorporating some of the advanced event automation options. If you navigated away after creating the new ruleset, navigate back via <em>Configuration</em> -> <em>Event Rules</em> and click on the ruleset's name. Follow the steps below to create the 4 rules shown:</p>\
+            	<p>Now we'll create rules to handle the events triggered in this exercise, incorporating some of the advanced event automation options. If you navigated away after creating the new ruleset, navigate back via <em>Automation</em> -> <em>Event Rules</em> and click on the ruleset's name. Follow the steps below to create the 4 rules shown:</p>\
             	<img src='images/exercise-rules.png' width='900' vspace='30'>\
                 <p class='subtitle'>Rule 1</p>\
                 <p>1. Click the <strong>+ New Event Rule</strong> button.</p>\
@@ -325,6 +323,7 @@ $('#instructions').on('click', "#validate-rules", function() {
             <p>Incorrect number of incidents. Troubleshooting ideas:</p>\
             <p> 1. Ensure your rules are configured as expected (Are alerts being routed to the correct service? Or are events being suppressed instead?)</p>\
             <p> 2. Did you wait for the alert storm to finish before checking the number of incidents triggered (Try refreshing your subdomain)</p>\
+            <p> 3. Did you select the option to Turn Off Alert Grouping when creating your service?</p>\
             <p>Resolve all open incidents on the service, hit the Trigger Events button above, and try again!</p>"
 
         } else {
@@ -605,11 +604,10 @@ $('#instructions').on('click', "#step9", function() {
         <div id='tip'>Read more about <a href='https://support.pagerduty.com/docs/related-incidents' target='_blank'>Related Incidents</a> in the Knowledge Base!</div>\
         <p>1. Within your subdomain navigate to <em>Services</em> -&gt; <em>Service Directory</em>.</p>\
         <p>2. Click the <strong>New Service</strong> button.</p>\
-        <p>3. Enter a <em>Name&nbsp;</em>for the service.</p>\
-        <p>4. Under&nbsp;<em>Integration Settings</em> choose the option&nbsp;<strong>Don't use an integration</strong>.</p>\
-        <p>5. Select an EP from the&nbsp;<em>Escalation Policy</em> dropdown.</p>\
-        <p>6. Select&nbsp;<strong>Use alert severity to determine how responders are notified for each incident</strong> from the&nbsp;<em>How should responders be notified?</em> dropdown.</p>\
-        <p>7. Leave all other settings as the default and click the&nbsp;<strong>Add Service</strong> button.</p>\
+        <p>3. Enter a <em>Name&nbsp;</em>for the service and then click <strong>Next</strong></p>\
+        <p>4. Leave the <strong>Generate a new Escalation Policy</strong> option selected on the Assign step and click <strong>Next</strong></p>\
+        <p>5. Select the option to <strong>Turn Off Alert Grouping</strong> and click <strong>Next</strong></p>\
+        <p>6. On the final step, click the <strong>Create service without an integration</strong> link at the bottom of the wizard</p>\
         <div id='nav-bar'><button class='nav-buttons back' id='intelligent-triage' type='submit'>< Go Back</button>\
         <button class='nav-buttons forward' id='step10' type='submit'>Continue ></button></div>"
 
@@ -624,7 +622,7 @@ $('#instructions').on('click', "#step10", function() {
 
         document.getElementById("instructions").innerHTML = "<h1>Create New Event Rules</h1>\
         <p>We'll be sending some fresh events to the routing endpoint in the next section so we first need to set up some additional rules to handle these new events. Follow the steps below carefully to create two new rules in your ruleset:</p>\
-        <p>1. Navigate to the ruleset created in part 1 (If you need a refresher, click on <em>Services</em>-><em>Event Rules</em> and click on the ruleset's name)\
+        <p>1. Navigate to the ruleset created in part 1 (If you need a refresher, click on <em>Automation</em>-><em>Event Rules</em> and click on the ruleset's name)\
         <p><img src='images/exercise-rules-pt2.png'></p>\
         <p class='subtitle'>Rule 1</p>\
         <p>2. Click the <strong>+ New Event Rule</strong> button.</p>\
