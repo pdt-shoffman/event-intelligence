@@ -382,10 +382,10 @@ $('#instructions').on('click', "#step5", function() {
         <p><img class='gifs' src='gifs/enable-iag.gif'></p>\
         <p>1. Navigate to&nbsp;<em>Services&nbsp;</em>-&gt;&nbsp;<em>Service Directory</em>.</p>\
 		<p>2. Search for your service or find it in the list and click on the service name to view the service's profile.</p>\
-		<p>3. Click on the&nbsp;<strong>Response</strong> tab.</p>\
-		<p>3. In the Automate section, click on the <strong>Edit</strong> link below&nbsp;<em>Alert Grouping</em>.</p>\
-		<p>4. Select the radial option next to <strong>Intelligently based on the alert content and past groups</strong>.</p>\
-		<p>5. Click the&nbsp;<strong>Save Alert Grouping Settings</strong> button.</p>\
+		<p>3. Click on the&nbsp;<strong>Settings</strong> tab.</p>\
+		<p>3. In the Reduce Noise section, click on the <strong>Edit</strong> link to the right.</p>\
+		<p>4. Select the radial option next to <strong>Intelligent</strong>.</p>\
+		<p>5. Click the&nbsp;<strong>Save Changes</strong> button.</p>\
 		<div id='nav-bar'><button class='nav-buttons back' id='grouping' type='submit'>< Go Back</button>\
         <button class='nav-buttons forward' id='step6' type='submit'>Continue ></button></div>"
 
